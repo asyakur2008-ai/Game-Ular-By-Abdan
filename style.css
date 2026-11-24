@@ -1,0 +1,24 @@
+:root { --bg: #10161f; --accent: #4ade80; --ink: #eef2f7; }
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: var(--bg); color: var(--ink); font-family: system-ui, Arial, sans-serif; touch-action: none; }
+canvas { display: block; width: 100vw; height: 100vh; }
+
+#hud { position: fixed; top: 10px; left: 10px; right: 10px; display: flex; justify-content: space-between; align-items: flex-start; pointer-events: none; }
+.score { background: #0008; padding: 6px 12px; border-radius: 8px; font-size: 1rem; }
+#board { margin: 0; padding: 8px 10px 8px 30px; background: #0008; border-radius: 8px; font-size: .8rem; min-width: 140px; }
+#board li.me { color: var(--accent); font-weight: bold; }
+
+#boost {
+  position: fixed; right: 18px; bottom: 22px; width: 84px; height: 84px; border-radius: 50%;
+  border: 3px solid var(--ink); background: #ffffff22; color: var(--ink); font-weight: bold; font-size: .9rem;
+}
+#boost:active { background: #ffffff55; }
+
+#overlay { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: #000a; padding: 16px; }
+#overlay.hide { display: none; }
+.box { max-width: 380px; text-align: center; background: #1b2430; padding: 24px; border-radius: 14px; border: 2px solid var(--accent); }
+.box h1 { margin: 0 0 10px; color: var(--accent); }
+.box p { margin: 8px 0; line-height: 1.4; }
+.box .small { font-size: .85rem; opacity: .75; }
+.box button { margin-top: 12px; padding: 12px 32px; border: 0; border-radius: 8px; background: var(--accent); color: #0b1a10; font-size: 1.1rem; font-weight: bold; cursor: pointer; }
+button:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
